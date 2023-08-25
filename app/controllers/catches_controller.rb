@@ -14,7 +14,7 @@ class CatchesController < ApplicationController
 
   private
   def catch_params
-    params.require(:catch).permit(:title, :fishing, :area, :fish, :lure, :image, :content)
+    params.require(:catch).permit(:title, :fishing, :area, :fish, :tool, :image, :content)
   end
 
 end

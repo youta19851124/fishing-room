@@ -1,15 +1,15 @@
 <div class="contents row">
   <div class="container">
     <h3>投稿する</h3>
-    <%= form_with(model: @catch, local: true) do |form| %>
-      <%= form.text_field :title, placeholder: "釣果タイトル" %>
-      <%= form.text_field :fishing, placeholder: "釣果日時" %>
-      <%= form.text_field :area, placeholder: "釣果エリア" %>
-      <%= form.text_field :fish, placeholder: "魚の種類" %>
-      <%= form.text_field :lure, placeholder: "ルアーの種類" %>
-      <%= form.text_field :image, placeholder: "画像" %>
-      <%= form.text_area  :content, placeholder: "text", rows: "10" %>
-      <%= form.submit "投稿" %>
+    <%= form_with(model: @catch, local: true) do |f| %>
+      <%= f.text_field :title, placeholder: "釣果タイトル" %>
+      <%= f.text_field :fishing, placeholder: "釣果日時" %>
+      <%= f.text_field :area, placeholder: "釣果エリア" %>
+      <%= f.text_field :fish, placeholder: "魚の種類" %>
+      <%= f.text_field :tool, placeholder: "ルアーの種類(任意)" %>
+      <%= f.file_field :image, id:"catch-image" %>
+      <%= f.text_area  :content, placeholder: "釣果日記" %>
+      <%= f.submit "投稿" %>
     <% end %>
   </div>
 </div>

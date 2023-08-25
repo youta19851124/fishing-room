@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_25_085506) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_25_093945) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -43,14 +43,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_25_085506) do
     t.string "title", null: false
     t.string "content", null: false
     t.string "fishing", null: false
-    t.bigint "user_id", null: false
-    t.bigint "fish_id", null: false
-    t.bigint "tool_id", null: false
+    t.string "area", null: false
+    t.string "fish", null: false
+    t.string "tool", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fish_id"], name: "index_catches_on_fish_id"
-    t.index ["tool_id"], name: "index_catches_on_tool_id"
-    t.index ["user_id"], name: "index_catches_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

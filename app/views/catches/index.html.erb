@@ -1,0 +1,8 @@
+<div class="contents row">
+  <% @catches.each do |catch| %>
+    <div class="content_post">
+      <%= image_tag catch.image, class: 'catch-image' %>
+      <p><%= catch.title %></p>
+    </div>
+  <% end %>
+</div>
