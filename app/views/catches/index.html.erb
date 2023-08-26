@@ -1,9 +1,15 @@
 <div class="contents row">
   <% @catches.each do |catch| %>
-    <div class="content_post">
-      <%= image_tag catch.image, class: 'catch-image' %>
-      <p><%= catch.title %></p> 
-      <h5>釣果日時<%= catch.fishing %></h5>
-    </div>
+    <ul class='catch-lists'>
+      <li class='list'>
+        <%= link_to catch_path(catch.id) do %>
+          <div class="content_post">
+            <%= image_tag catch.image, class: 'catch-image' %>
+            <p><%= catch.title %></p> 
+            <h5>釣果日時<%= catch.fishing %></h5>
+          </div>
+        <% end %>
+      </li>
+    </ul>
   <% end %>
 </div>

@@ -1,0 +1,50 @@
+<div class="contents row">
+  <div class="catch-show">
+    <div class="catch-box">
+      <h2 class="title">
+        <%= @catch.title %>
+      </h2>
+      <div class="catch-img-content">
+        <%= image_tag @catch.image, class:"catch-box-img" %>
+      </div>
+    </div>
+    <div class="catch-explain-box">
+      <h6> 釣果日記：<span><%= @catch.content %></span></h6>
+    </div>
+    
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-catch">釣果日時：</th>
+          <td class="detail-value"><%= @catch.fishing %></td>
+        </tr>
+        <tr>
+          <th class="detail-catch">魚の種類：</th>
+          <td class="detail-value"><%= @catch.fish %></td>
+        </tr>
+        <tr>
+          <th class="detail-catch">釣果エリア：</th>
+          <td class="detail-value"><%= @catch.area %></td>
+        </tr>
+        <tr>
+          <th class="detail-catch">ルアーの種類：</th>
+          <td class="detail-value"><%= @catch.tool %></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="comment-box">
+      <form>
+        <textarea class="comment-text"></textarea>
+        <p class="comment-warn">
+          コメントフォーム入力後に下記のボタンを押してください
+          <br>
+        </p>
+        <button type="submit" class="comment-btn">
+          <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+          <span>コメントする<span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
