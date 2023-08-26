@@ -7,6 +7,14 @@
       <div class="catch-img-content">
         <%= image_tag @catch.image, class:"catch-box-img" %>
       </div>
+        <ul class="more_list">
+          <li>
+            <%= link_to '編集', edit_catch_path(@catch.id), method: :get, class: "catch-blue-btn" %>
+          </li>
+          <li>
+            <%= link_to '削除', catch_path(@catch.id), data: { turbo_method: :delete }, class:"catch-destroy" %>
+          </li>
+        </ul>
     </div>
     <div class="catch-explain-box">
       <h6> 釣果日記：<span><%= @catch.content %></span></h6>
