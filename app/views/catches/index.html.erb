@@ -1,0 +1,9 @@
+<div class="contents row">
+  <% @catches.each do |catch| %>
+    <div class="content_post">
+      <%= image_tag catch.image, class: 'catch-image' %>
+      <p><%= catch.title %></p> 
+      <h5>釣果日時<%= catch.fishing %></h5>
+    </div>
+  <% end %>
+</div>
