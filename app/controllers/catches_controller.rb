@@ -17,9 +17,13 @@ class CatchesController < ApplicationController
   end
 
   def edit
+    @catch = Catch.find(params[:id])
   end
 
   def update
+    catch = Catch.find(params[:id])
+    catch.update(catch_params)
+    redirect_to root_path
   end
 
   def destroy
