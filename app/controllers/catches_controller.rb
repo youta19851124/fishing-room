@@ -1,4 +1,6 @@
 class CatchesController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
+
   def index
     @catches = Catch.all
   end
@@ -40,6 +42,12 @@ class CatchesController < ApplicationController
   private
   def catch_params
     params.require(:catch).permit(:title, :fishing, :area, :fish, :tool, :image, :content)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 end
