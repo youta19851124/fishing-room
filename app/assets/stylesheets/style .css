@@ -1068,6 +1068,10 @@ footer p {
   padding: 1vh 5vw;
 }
 
-.catch-explain-box{
+.user-name{
   margin-top: 30px;
+}
+
+.catch-explain-box{
+  margin-top: 10px;
 }

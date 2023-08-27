@@ -16,6 +16,11 @@
           </li>
         </ul>
     </div>
+    <div class="user-name">
+      <a href="/catches/<%= @catch.user.id %>">
+        <span>投稿者:</span><%= @catch.user.nickname %>
+      </a>
+    </div>
     <div class="catch-explain-box">
       <h6> 釣果日記：<span><%= @catch.content %></span></h6>
     </div>

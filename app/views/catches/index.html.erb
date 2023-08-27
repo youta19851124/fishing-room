@@ -10,6 +10,7 @@
           <div class="content_post">
             <%= image_tag catch.image, class: 'catch-image' %>
             <p><%= catch.title %></p> 
+            <span class="name">投稿者<%= catch.user.nickname %></span>
             <h5>釣果日時<%= catch.fishing %></h5>
           </div>
         <% end %>

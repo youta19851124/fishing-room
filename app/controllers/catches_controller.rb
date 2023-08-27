@@ -2,7 +2,7 @@ class CatchesController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @catches = Catch.all
+    @catches = Catch.includes(:user)
   end
 
   def new
@@ -41,7 +41,7 @@ class CatchesController < ApplicationController
 
   private
   def catch_params
-    params.require(:catch).permit(:title, :fishing, :area, :fish, :tool, :image, :content)
+    params.require(:catch).permit(:title, :fishing, :area, :fish, :tool, :image, :content).merge(user_id: current_user.id)
   end
 
   def move_to_index
