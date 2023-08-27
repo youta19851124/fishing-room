@@ -12,6 +12,7 @@
 
   <body>
     <header class="header">
+      <%= image_tag "left-image.png", class: "left-image"%>
       <div class="header__bar row">
         <h1 class="grid-6"><a href="/">釣りの部屋</a></h1>
         <% if user_signed_in? %>
@@ -33,6 +34,10 @@
           </div>
         <% end %>
       </div>
+        <%= form_with(url: search_catches_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+        <% end %>
     </header>
     <%= yield %>
     <footer>

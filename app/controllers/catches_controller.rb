@@ -2,7 +2,7 @@ class CatchesController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @catches = Catch.includes(:user)
+    @catches = Catch.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -16,6 +16,8 @@ class CatchesController < ApplicationController
 
   def show
     @catch = Catch.find(params[:id])
+    @comment = Comment.new
+    @comments = @catch.comments.includes(:user)
   end
 
   def edit
