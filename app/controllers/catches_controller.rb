@@ -27,6 +27,9 @@ class CatchesController < ApplicationController
   end
 
   def destroy
+    catch = Catch.find(params[:id])
+    catch.destroy
+    redirect_to root_path
   end
 
   private
