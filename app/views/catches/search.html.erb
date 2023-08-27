@@ -1,0 +1,9 @@
+<div class="contents row">
+  <% if @catches.empty? %>
+    <p><%= @no_results_message %></p>
+  <% else %>
+    <% @catches.each do |catch| %>
+      <%= render partial: "catch", locals: { catch: catch } %>
+    <% end %>
+  <% end %>
+</div>

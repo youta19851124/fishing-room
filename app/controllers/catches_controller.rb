@@ -32,6 +32,11 @@ class CatchesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @catches = Catch.search(params[:keyword])
+    @no_results_message = "一致する釣果情報はありません" if @catches.empty?
+  end
+
   private
   def catch_params
     params.require(:catch).permit(:title, :fishing, :area, :fish, :tool, :image, :content)
