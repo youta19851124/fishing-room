@@ -8,6 +8,7 @@
             <p><%= catch.title %></p> 
             <span class="name">投稿者<%= catch.user.nickname %></span>
             <h5>釣果日時<%= catch.fishing %></h5>
+            <h5>投稿日時<%= catch.created_at.strftime('%Y/%m/%d %H:%M') %></h5>
           </div>
         <% end %>
       </li>

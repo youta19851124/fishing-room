@@ -1,6 +1,5 @@
 <div class="catch-box">
   <div class="contents row">
-    <% @catches.each do |catch| %>
       <ul class='catch-lists'>
         <li class='list'>
           <%= link_to catch_path(catch.id) do %>
@@ -12,7 +11,6 @@
           <% end %>
         </li>
       </ul>
-    <% end %>
   </div>
   
 </div>

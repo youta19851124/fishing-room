@@ -1,9 +1,22 @@
 <div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
-  <% @catches.each do |catch| %>
-    <div class="content_post" style="background-image: url(<%= catch.image %>);">
-      <p><%= catch.content %></p>
-      <span class="title"><%= catch.title %></span>
-    </div>
-  <% end %>
+  <div class="user-info">
+    <p>ユーザー名：<%= @nickname %></p>
+    <p>自己紹介：<%= @introduction %>
+      <%= link_to 'ユーザー情報を編集する', edit_user_path(current_user.id), method: :get, class: "user-edit-btn" %>
+
+    <p><%= @nickname %>さんの投稿一覧</p>
+    <% @catches.each do |catch| %>
+      <div class="user-catch">
+        <div class="title">
+          <%= catch.title %>
+        </div>
+        <div class="catch-image">
+          <%= image_tag catch.image %>
+        </div>
+        <div class="content">
+          <%= catch.content %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

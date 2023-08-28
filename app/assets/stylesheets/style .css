@@ -1005,7 +1005,7 @@ form input[type="submit"]:hover {
 }
 
 .container {
-  margin: 20px 0;
+  margin: 150px 0 20px 0;
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
@@ -1084,7 +1084,11 @@ footer p {
 }
 
 .user-name {
-  margin: 0 auto;
+  margin: 20px 0;
+}
+
+.catch-box {
+  margin-top: 200px;
 }
 
 .catch-explain-box {
@@ -1097,4 +1101,31 @@ footer p {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.user-info {
+  margin-top: 150px;
+}
+
+.content {
+  margin-top: 20px;
+  color: gray;
+}
+
+.title {
+  color: gray;
+}
+
+.user-catch {
+  margin-top: 50px;
+}
+
+.user-edit-btn {
+  text-align: center;
+  background-color: rgb(116, 142, 246);
+  font-size: 12px;
+  font-weight: bold;
+  color: #fcfefb;
+  margin: 30px 0;
+  padding: 1vh 3vw;
 }

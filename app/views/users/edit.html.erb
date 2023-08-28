@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>編集 ユーザー</h2>
+
+  <%= form_for(current_user, html: { method: :PATCH }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: @user %>
+
+    <div class="field">
+      <%= f.label :ニックネーム %> <em>(6文字以内)</em><br />
+      <%= f.text_field :nickname, autofocus: true, maxlength: "6", autocomplete: "nickname" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :メールアドレス %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :自己紹介 %><br />
+      <%= f.text_field :introduction, autofocus: true, autocomplete: "introduction" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :現在のパスワード %> <br />
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+    </div>
+
+    <div class="update">
+      <%= f.submit "更新" %>
+    </div>
+  <% end %>
+
+
+  <div> <%= button_to "編集をやめる", catch_path(@user) %></div>
+
+  <%= link_to "Back", :back %>
+</div>
