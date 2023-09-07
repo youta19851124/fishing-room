@@ -1,0 +1,24 @@
+<% @fishes.each do |fish| %>
+  <div class="fish">
+    <div class="fish-genre">
+      <%= fish.genre.name %>
+    </div>
+    <div class="fish-image">
+      <%= image_tag fish.image %>
+    </div>
+    <div class="fish-size">
+      <%= fish.size %>
+    </div>
+    <div class="fish-good-area">
+      <%= fish.good_area %>
+    </div>
+    <div class="fish-good-season">
+      <%= fish.good_season %>
+    </div>
+    <div class="fish-good-lure">
+      <%= fish.good_lure %>
+    </div>
+
+
+  </div>
+<% end %>

@@ -1,3 +1,22 @@
+<div class="genre-box">
+  <div class="fish-box">
+    <%= form_with(model: @fish, local: true) do |f| %>
+      <%= f.collection_select(:fish_genre_id, FishGenre.all, :id, :name, {}, {class: "genre-select"}) %>
+      <%= link_to "詳細", fish_path(@fish.id), id: "custom-btn" %>
+    <% end %>
+  </div>
+  <div class="tool-box">
+    <%= form_with(model: @fish, local: true) do |f| %>
+      <%= f.collection_select(:tool_genre_id, ToolGenre.all, :id, :name, {}, {class: "genre-select"}) %>
+    <% end %>
+  </div>
+  <div class="area-box">
+    <%= form_with(model: @fish, local: true) do |f| %>
+      <%= f.collection_select(:area_genre_id, AreaGenre.all, :id, :name, {}, {class: "genre-select"}) %>
+    <% end %>
+  </div>
+</div>
+
 <div class="contents row">
   <% @catches.each do |catch| %>
     <ul class='catch-lists'>

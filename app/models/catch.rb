@@ -2,6 +2,7 @@ class Catch < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   has_many :comments
+  has_many :fishes
   
   validates :title, presence: true
   validates :fishing, presence: true

@@ -6,7 +6,7 @@ class CreateCatches < ActiveRecord::Migration[7.0]
       t.string :fishing, null: false
       t.string :area, null: false
       t.references :user, null: false
-      t.string :fish, null: false
+      t.text :fish, null: false
       t.string :tool, null: false
       t.timestamps
     end

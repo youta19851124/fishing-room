@@ -3,6 +3,7 @@ class CatchesController < ApplicationController
 
   def index
     @catches = Catch.includes(:user).order("created_at DESC")
+    @catch = Catch.new
   end
 
   def new
@@ -43,7 +44,7 @@ class CatchesController < ApplicationController
 
   private
   def catch_params
-    params.require(:catch).permit(:title, :fishing, :area, :fish, :tool, :image, :content).merge(user_id: current_user.id)
+    params.require(:catch).permit(:title, :fishing, :area, :tool, :image, :content, :fish).merge(user_id: current_user.id)
   end
 
   def move_to_index

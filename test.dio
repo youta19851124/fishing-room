@@ -73,7 +73,7 @@
                 <mxCell id="55" value="fishes" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry y="585" width="160" height="206" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="fish_name, string" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="55" vertex="1">
+                <mxCell id="56" value="fish_genre, integer" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="55" vertex="1">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="59" value="image, text" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="55" vertex="1">
@@ -306,18 +306,18 @@
                 <mxCell id="133" style="edgeStyle=none;html=1;entryX=0.378;entryY=-0.035;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="83" target="72" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="135" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="46" target="31">
+                <mxCell id="135" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="46" target="31" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="136" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="28" target="44">
+                <mxCell id="136" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="28" target="44" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="137" style="edgeStyle=none;html=1;" edge="1" parent="1" source="28">
+                <mxCell id="137" style="edgeStyle=none;html=1;" parent="1" source="28" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="170" y="430" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="138" style="edgeStyle=none;html=1;" edge="1" parent="1" source="28">
+                <mxCell id="138" style="edgeStyle=none;html=1;" parent="1" source="28" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="170" y="410" as="targetPoint"/>
                     </mxGeometry>

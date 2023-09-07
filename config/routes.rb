@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :edit, :update]
+  resources :fishes, only: [:index, :show]
 end

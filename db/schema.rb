@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_27_093946) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_29_003130) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -45,10 +45,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_27_093946) do
     t.string "fishing", null: false
     t.string "area", null: false
     t.bigint "user_id", null: false
-    t.string "fish", null: false
+    t.bigint "fish_id"
     t.string "tool", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["fish_id"], name: "index_catches_on_fish_id"
     t.index ["user_id"], name: "index_catches_on_user_id"
   end
 
@@ -58,6 +59,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_27_093946) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fishes", charset: "utf8", force: :cascade do |t|
+    t.integer "fish_genre_id"
+    t.text "image"
+    t.string "size"
+    t.string "good_area"
+    t.string "good_season"
+    t.text "good_lure"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "catch_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
@@ -76,4 +89,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_27_093946) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "catches", "fishes"
 end
