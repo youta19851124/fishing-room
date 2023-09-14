@@ -3,6 +3,7 @@ class Catch < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_many :fishes
+  belongs_to :fish_genre, class_name: 'FishGenre', foreign_key: :fish_genre_id
   
   validates :title, presence: true
   validates :fishing, presence: true

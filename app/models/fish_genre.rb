@@ -15,5 +15,6 @@ class FishGenre < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :fishes
+  has_many :catches
 
 end
